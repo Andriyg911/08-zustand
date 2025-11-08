@@ -1,20 +1,27 @@
-"use client";
-import { useRouter } from "next/navigation";
-import React, { useEffect } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cторінку не було знайдено",
+  description: "Сторінку яку ви шукали не було знайдено...",
+  openGraph: {
+    title: "Cторінку не було знайдено",
+    description: "Сторінку яку ви шукали не було знайдено...",
+    url: "/not-found",
+    images: [
+      {
+        url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
 
 const NotFound = () => {
-  const router = useRouter();
-  useEffect(() => {
-    const timer = setTimeout(() => router.push("/"));
-    return () => clearTimeout(timer);
-  }, [router]);
   return (
     <div>
-      <h1>404 - Page Not Found</h1>
-      <p>
-        Sorry, the page you are looking for doesnt exist, you will be return to
-        a Home page.
-      </p>
+      <h1>404 - Сторінку не було знайдено</h1>
+      <p>Сторінку, яку ви шукали, не знайдено.</p>
     </div>
   );
 };

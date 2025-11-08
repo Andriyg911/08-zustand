@@ -17,7 +17,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/notes/filter/all" className={css.navLink}>
+            <Link href="/notes/filter/All" className={css.navLink}>
               <FiBook className={css.icon} /> Notes
             </Link>
           </li>

@@ -7,7 +7,7 @@ export interface Note {
   updatedAt: string;
 }
 
-type Tag = "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
+export type Tag = "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
 
 export const tagList: Tag[] = [
   "Todo",
@@ -16,3 +16,10 @@ export const tagList: Tag[] = [
   "Meeting",
   "Shopping",
 ];
+
+// Тип для чернетки (без id, дат)
+export interface NoteDraft {
+  title: string;
+  content: string;
+  tag: Tag;
+}
